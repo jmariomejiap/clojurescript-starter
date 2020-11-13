@@ -5,7 +5,6 @@
  :dependencies
  [[org.omcljs/om "1.0.0-beta4"]
   [sablono "0.7.5"]]
-;  []
 
  :builds
  {:app {:target :browser

@@ -1,12 +1,15 @@
 (ns starter.browser
   (:require
    [om.core :as om :include-macros true]
-   [sablono.core :as html :refer-macros [html]]))  
+   [sablono.core :as html :refer-macros [html]]
+   [starter.components.header :refer [header header-2]]
+   ))  
 
 (defonce app-state (atom {:text "Hello Natalia"}))
 
 (defn test-component []
   (html [:div "mario test"]) )
+
 
 (defn main []
   (om/root
@@ -14,7 +17,12 @@
      (reify
        om/IRender
        (render [_]
-         (test-component))))
+         (html
+          [:div
+           [:h1 "this is my header inline"]
+           (header)
+           (header-2)
+           (test-component)]))))
    app-state
    {:target (.getElementById js/document "app")}))
 
