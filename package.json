@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "dev": "npx shadow-cljs watch app",
+    "jest": "TODO"
+  },
+  "dependencies": {
+    "react": "0.14.8",
+    "react-dom": "0.14.8"
+  },
   "devDependencies": {
     "shadow-cljs": "^2.3.22"
   }
